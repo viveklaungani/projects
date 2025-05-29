@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .exercise-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .exercise-card {
+            background-color: #ffffff;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .exercise-card h2 {
+            font-size: 1.5em;
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .exercise-details p {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+        }
+        .gif-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .exercise-card img {
+            max-width: 200px; /* Increased size */
+            max-height: 200px; /* Increased size */
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        .log-form {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .log-form h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .log-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .log-form input[type="number"] {
+            width: calc(33% - 12px); /* Adjust width for three inputs per row */
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .log-form input[type="number"]:last-of-type {
+            margin-right: 0;
+        }
+        .log-form button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .log-form button:hover {
+            background-color: #218838;
+        }
+        .stats {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .stats h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #0056b3;
+        }
+        .stats div {
+            margin-bottom: 5px;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .stats strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Fitness Tracker</h1>
+    <div id="exercise-list-container" class="exercise-container">
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
